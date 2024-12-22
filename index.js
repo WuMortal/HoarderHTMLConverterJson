@@ -2,21 +2,33 @@ $(function () {
 
     var result = $([]).toArray();
 
-    let rootFavorites = $('body > dl > dl > dt:nth-child(3) > h3');
-    $.each(rootFavorites, (i, e) => {
-        let tags = $(e).next('dl').children('dt').children('a');
-        let subFavorites = $(e).siblings('dl').find('dt > h3');
-        $.each(tags, (tagIndex, tagE) => {
-            let $tag = $(tagE);
-            result.push({
-                title: $tag.text(),
-                url: $tag.attr('href'),
-                tag: $(e).text()
+    let rootFavorites = $('body > dl > dt > dl > dt > h3');
+    recursiveParse(rootFavorites);
+
+    function recursiveParse(folderTag, parentFolderPath) {
+        $.each(folderTag, (i, e) => {
+            let currentFolderPath = parentFolderPath != null && parentFolderPath != '' ? `${parentFolderPath},${$(e).text()}` : $(e).text();
+            let tags = $(e).next('dl').children('dt').children('a');
+            let subFavorites = $(e).next('dl').children('dt').children('h3');
+            $.each(tags, (tagIndex, tagE) => {
+                let $tag = $(tagE);
+                result.push({
+                    title: $tag.text(),
+                    url: $tag.attr('href'),
+                    tag: $(e).text(),
+                    path: currentFolderPath
+                });
             });
+
+            if (subFavorites.length >= 0) {
+                recursiveParse(subFavorites, currentFolderPath);
+            }
+
         });
+    }
 
-
-    });
-    console.log(result);
+    function convertToHoarderJson(data) {
+        //TODO:
+    }
 
 });

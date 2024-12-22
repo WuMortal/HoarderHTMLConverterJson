@@ -1,6 +1,6 @@
 $(function () {
 
-    var result = $([]).toArray();
+    var parseData = $([]).toArray();
 
     let rootFavorites = $('body > dl > dt > dl > dt > h3');
     recursiveParse(rootFavorites);
@@ -12,7 +12,7 @@ $(function () {
             let subFavorites = $(e).next('dl').children('dt').children('h3');
             $.each(tags, (tagIndex, tagE) => {
                 let $tag = $(tagE);
-                result.push({
+                parseData.push({
                     title: $tag.text(),
                     url: $tag.attr('href'),
                     tag: $(e).text(),

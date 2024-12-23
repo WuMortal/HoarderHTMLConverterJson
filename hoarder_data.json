@@ -1,0 +1,67 @@
+{
+    "bookmarks": [
+        {
+            "createdAt": 1734946950,
+            "title": "百度一下，你就知道",
+            "tags": [
+                "search"
+            ],
+            "content": {
+                "type": "link",
+                "url": "https://www.baidu.com/"
+            },
+            "note": null
+        },
+        {
+            "createdAt": 1734946950,
+            "title": "test - Google 搜索",
+            "tags": [
+                "search"
+            ],
+            "content": {
+                "type": "link",
+                "url": "https://www.google.com/search?q=test&sca_esv=098daf8b30008225&source=hp&ei=tSVoZ9HiJ_K40PEP2dju6A0&iflsig=AL9hbdgAAAAAZ2gzxZFXWr_3Fq4wRW2xQm2qv3nMWCcS&ved=0ahUKEwiRkZzLzruKAxVyHDQIHVmsG90Q4dUDCA8&uact=5&oq=test&gs_lp=Egdnd3Mtd2l6IgR0ZXN0MgUQABiABDIFEAAYgAQyBRAAGIAEMgUQABiABDIFEAAYgAQyBRAAGIAEMgUQABiABDIFEAAYgAQyBRAAGIAEMgUQLhiABEiUB1AAWMMCcAB4AJABAJgB-gGgAdIHqgEDMi00uAEDyAEA-AEBmAIDoALmBcICCxAuGIAEGNEDGMcBmAMAkgcDMi0zoAfUIA&sclient=gws-wiz"
+            },
+            "note": null
+        },
+        {
+            "createdAt": 1734946950,
+            "title": "Google",
+            "tags": [
+                "search",
+                "magic"
+            ],
+            "content": {
+                "type": "link",
+                "url": "https://www.google.com/"
+            },
+            "note": null
+        },
+        {
+            "createdAt": 1734946950,
+            "title": "YouTube",
+            "tags": [
+                "search",
+                "magic",
+                "vidoes"
+            ],
+            "content": {
+                "type": "link",
+                "url": "https://www.youtube.com/"
+            },
+            "note": null
+        },
+        {
+            "createdAt": 1734946950,
+            "title": "Google News",
+            "tags": [
+                "news"
+            ],
+            "content": {
+                "type": "link",
+                "url": "https://news.google.com/home?hl=en-US&gl=US&ceid=US:en"
+            },
+            "note": null
+        }
+    ]
+}

@@ -27,6 +27,7 @@ $(function () {
                 $('.app-content-result-text').val('html is valid,please click [Convert] button.');
             };
             reader.readAsText(file);
+            parseData = $([]).toArray();
         }
 
     });
@@ -53,8 +54,8 @@ $(function () {
     $('.app-content-result-download').click(function () {
         var a = document.createElement('a');
         a.download = `hoarder_${new Date().getTime()}.json`;
-        a.href = URL.createObjectURL(new Blob([JSON.stringify(hoarderData, null, 4)], {type: "application/json"}));
-        a.click();        
+        a.href = URL.createObjectURL(new Blob([JSON.stringify(hoarderData, null, 4)], { type: "application/json" }));
+        a.click();
     });
 
     function recursiveParse(folderTag, parentFolderPath) {
